@@ -1,0 +1,44 @@
+// sum of diagonal elements
+// Algorithm
+// Start
+// Initialize primarySum ← 0, secondarySum ← 0
+// Loop i from 0 to n - 1:
+// Add arr[i][i] to primarySum
+// Add arr[i][n - i - 1] to secondarySum
+// End loop
+// Print primarySum and secondarySum
+// End
+
+
+Time complexity O(n)
+space complexity O(1)
+ const array = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9] 
+];
+
+const findSum = (item) => {
+    let sum = 0;
+    let lenth = item.length  
+    let widthLenth = item[0].length   
+    if(lenth < 1){  
+        return 0
+    }
+    let minmum = lenth;   
+    if(minmum >= widthLenth){  
+        minmum = widthLenth
+    }
+    for(let i=0 ; i <minmum ; i++ ){   
+        let value = item[i][i]    
+         sum = sum + value
+        console.log("sum",sum)
+    }
+    
+    return sum 
+}
+ 
+ const result = findSum(array)      
+ console.log("result ",result)
+ 
+
