@@ -1,1 +1,30 @@
+// const arrayList = [84,85,86,87,85,90,85,83,23,45,1,2,0]
+// Find the maximum element in the array and print its value
 
+// Algorithm
+// start 
+// store TempMax -1
+// store Tempindex 0
+// itrate over list 
+// check element i > tempMax
+// assine i value for temMax 
+// assine i index for Tempindex
+
+
+ const getBestSocre = (list) => {
+    if (list.length === 0) return "Array is empty";
+     let len = list.length;        
+     let tempMax = -1
+     let tempIndex = 0
+     for(let i=0; i<len ;i++){ 
+        if(list[i] > tempMax){
+            tempMax = list[i]
+            tempIndex = i
+            console.log(`${tempMax} ==   ${tempIndex}`)
+        }
+     }
+     return(`max value ${tempMax} index ${tempIndex}`)
+ }
+ 
+ const result = getBestSocre(arrayList)
+ console.log("result ",result)
