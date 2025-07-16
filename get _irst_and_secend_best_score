@@ -1,27 +1,32 @@
  const arrayList = [84,85,86,87,85,90,85,83,23,45,1,2,0]
- 
  // get first and secend best score
- // create array item 2
- // for loop lenth n
- // condition check item and new array 
- //
- 
+ // Algorithm //
+
+// Initialize tempArr = [-1, -1] to store the two highest values.
+// Iterate over the list:
+// If the current element is greater than tempArr[0]:
+// Assign it to tempArr[1].
+// If tempArr[1] > tempArr[0], swap them.
+// At the end, tempArr[0] will contain the largest number, and tempArr[1] the second largest.
+
  const getBestSocre = (list) => {
-     let len = list.length;
-     let tempArr = [-1, -1]
-     console.log(tempArr)
-     for(let i=0; i<len ;i++){
-          console.log("outer ",list[i])   
+     let len = list.length;    
+     let tempArr = [-1, -1]   
+     console.log(tempArr)  
+     for(let i=0; i<len ;i++){ 
         if(list[i] > tempArr[0]){
-            tempArr[0] =  list[i]
-            
-            // if(tempArr[0] < tempArr[1]){
-            //   let temp =  tempArr[0]
-            //     }
-            //  }
+        tempArr[1] =  list[i]
+        if(tempArr[1] > tempArr[0]){
+            let tempvalue = tempArr[0]
+            tempArr[0] = tempArr[1]
+            tempArr[1] = tempvalue
+            }
          }
-              
      }
+ }
+ 
+ const result = getBestSocre(arrayList)
+ console.log("result ",result)
      
  }
  
