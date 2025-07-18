@@ -1,0 +1,21 @@
+const arrayItem = [1,1,2,2,3,3]
+
+
+const returnewLength = (item) => {
+    let current = 0
+    for(i=1; i<item.length;i++){
+        if(item[current] < item[i]){
+            item[current+1] = item[i]
+            current = current + 1
+        }
+    }
+    console.log(current)
+    for(i=current+1;i<item.length;i++){
+        console.log(i)
+        item[i] = item[current]
+    }
+   console.log(item)
+}
+
+const result = returnewLength(arrayItem)
+//console.log(result)
