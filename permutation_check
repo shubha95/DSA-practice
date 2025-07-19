@@ -1,0 +1,55 @@
+let  nums = [1,2,3]
+let nums2= [3,2,1]
+
+const containsDuplicate = (nums,nums2) => {
+    if(nums.length === 0) return false
+    let status = false
+    for(let i=0 ; i < nums.length ; i++){
+        const result = searchValue(nums2, nums[i])
+        status = result
+    }
+    return status
+};
+
+const searchValue = (numsarr, numsvaliue) =>{
+ 
+    for(let i=0; i<numsarr.length ;i++){
+  
+        if(numsarr[i] === numsvaliue){
+            console.log(`${numsarr[i]} = ${numsvaliue}`)
+            return true
+        }
+    }
+}
+
+const result = containsDuplicate(nums,nums2)
+console.log(result)
+
+
+
+secnd solution 
+
+let  nums = [1,2,3]
+let nums2= [3,2,1]
+
+const containsDuplicate = (nums,nums2) => {
+    if(nums.length !== nums2.length) return false
+     let sum1 = 0
+     let sum2 =0
+     let mult1= 1
+     let mult2= 1
+     for(let i=0;i<nums.length;i++ ){
+         sum1+=nums[i]
+         sum2+=nums2[i]
+         mult1*=nums[i]
+         mult2*=nums2[i]
+     }
+     if(sum1 === sum2 && mult1 === mult2){
+         return true
+     }else{
+         return false
+     }
+}
+
+const result = containsDuplicate(nums,nums2)
+console.log(result)
