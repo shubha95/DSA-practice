@@ -1,1 +1,25 @@
+input arr [2,7,11,15], target 9
+start 
+create variable fisrtTemp = arr[0]
+craete secend seceendVariable = 0
+itrate loop 1 to n time 
+check condition 
+target = index[value] + fisrtTemp = true
+seceendVariable = index[value]
+temp = index[value]
+return 
 
+itration loop i=0 to n
+itration j=i to n
+target = value[i] + value[j]
+return i and j
+
+
+var twoSum = function(nums, target) {
+    for(let i=0;i<nums.length;i++) {
+        for(let j=i+1;j<nums.length;j++) {
+            if(nums[i] + nums[j] === target) {
+                return [i, j];
+            }
+        }
+    }
