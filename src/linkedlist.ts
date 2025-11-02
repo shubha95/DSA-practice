@@ -12,7 +12,7 @@ export class LinkedList<T> {
     return this;
   }
 
-  insertLinkedList(value:number): LinkedList<T> {
+  insert(value: number): LinkedList<T> {
     const tempNode = new Node<T>(value);
     if (this.head === null) {
       this.head = this.tail = tempNode;
@@ -24,6 +24,28 @@ export class LinkedList<T> {
     }
     this.size++
     return this;
+  }
+
+  insertAtHead(value: number): LinkedList<T> {
+    const tempNode = new Node<T>(value);
+    if (this.head === null) {
+      this.head = this.tail = tempNode;
+    } else {
+       tempNode.next = this.head
+       this.head = tempNode
+    }
+    return this;
+  }
+
+  removeAtHead(){
+    let tempHead = this.head?.value
+    if(this.head === null){
+      console.log('List is Empaty')
+    }else{
+      this.head = this.head.next;
+      this.size--
+    }
+    return tempHead
   }
 
 
@@ -49,6 +71,10 @@ export class LinkedList<T> {
 
       }
     }
+    return this
+  }
+
+  deleteLinkedList(): LinkedList<T> {
     return this
   }
 }

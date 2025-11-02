@@ -1,21 +1,11 @@
 import { LinkedList } from './linkedlist';
-import { RemoveDublicate } from './removeDublicate';
-
+import { Stack } from './Stack';
+import { balancePattern } from './balancePatter';
 function demo() {
-  const list = new LinkedList<number>();
-  const remover = new RemoveDublicate<number>();
-  list.createLinkedList()
-  list.insertLinkedList(1)
-  list.insertLinkedList(2)
-  list.insertLinkedList(1)
-  list.insertLinkedList(3)
-  list.insertLinkedList(5)
-  list.insertLinkedList(2)
-  list.insertLinkedList(4)
-  list.insertLinkedList(1)
-  list.travesLinkedList();
-  remover.removeDublicates(list);
-    list.travesLinkedList();
+  const data = '{(a+b)*[ab - }}}}}a-d]+ (a+b)}'
+  const balancePatter = new balancePattern(data)
+  let isBalanced = balancePatter.balancePatterCheck(data)
+  console.log("balance parten ---", isBalanced);
   // console.log("Demo complete");
 }
 

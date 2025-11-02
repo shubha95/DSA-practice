@@ -1,8 +1,8 @@
 export class Node<T> {
-  value: number;
+  value: any;
   next: Node<T> | null;
 
-  constructor(value: number) {
+  constructor(value: any) {
     this.value = value;
     this.next = null;
   }
