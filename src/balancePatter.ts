@@ -72,7 +72,4 @@ export class balancePattern<T> {
         }
     }
 
-    push(symbalItem: string) {
-
-    }
 }

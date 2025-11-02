@@ -1,10 +1,10 @@
 import { Node } from './node';
-
 export class LinkedList<T> {
   public head: Node<T> | null = null;
   public tail: Node<T> | null = null;
   public size: number = 0;
 
+  // create a new linked list
   createLinkedList(): LinkedList<T> {
     this.head = null;
     this.tail = null;
@@ -12,6 +12,7 @@ export class LinkedList<T> {
     return this;
   }
 
+  // insert new value at the end of linked list
   insert(value: number): LinkedList<T> {
     const tempNode = new Node<T>(value);
     if (this.head === null) {
@@ -26,6 +27,8 @@ export class LinkedList<T> {
     return this;
   }
 
+
+  // insert new value at the head of linked list
   insertAtHead(value: number): LinkedList<T> {
     const tempNode = new Node<T>(value);
     if (this.head === null) {
@@ -37,6 +40,8 @@ export class LinkedList<T> {
     return this;
   }
 
+
+  // remove value at head of linked list
   removeAtHead(){
     let tempHead = this.head?.value
     if(this.head === null){
@@ -48,7 +53,7 @@ export class LinkedList<T> {
     return tempHead
   }
 
-
+  // traverse the linked list
   travesLinkedList(): LinkedList<T> {
     let current = this.head;
     if (!current) {
@@ -63,6 +68,8 @@ export class LinkedList<T> {
     return this;
   }
 
+
+  // insert new value at specific location in linked list
   insertlocation(value: number, index: number): LinkedList<T> {
     let tempNode = new Node<T>(value)
     let current = this.head;
@@ -74,6 +81,8 @@ export class LinkedList<T> {
     return this
   }
 
+
+  // delete the linked list
   deleteLinkedList(): LinkedList<T> {
     return this
   }

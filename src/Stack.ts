@@ -17,16 +17,22 @@ export class Stack<T> {
     //     this.linkedList.insertAtHead(data)
     //   }
 
+
+    // push new value onto the stack
     pushStack(value: any) {
         this.linkedList.insertAtHead(value)
         this.top = this.linkedList.head
         this.height = this.height + 1;
     }
+
+    // print the stack
     printStack(): Stack<T> {
         this.linkedList.travesLinkedList()
         return this;
     }
 
+
+    // peek the top value of the stack
     peek() {
         console.log('top stack ', this.top ? this.top?.value : null)
     }
@@ -39,6 +45,8 @@ export class Stack<T> {
     // hed update
     // size update 
 
+
+    // remove the top value from the stack
     pop() {
         let removedValue = this.linkedList.removeAtHead()
         this.top = this.linkedList.head
@@ -46,8 +54,8 @@ export class Stack<T> {
         return removedValue;
     }
 
-
-    isEmpty(){
+    // check if stack is empty
+    isEmpty() {
         return this.height === 0
     }
 }
