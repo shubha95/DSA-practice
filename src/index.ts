@@ -1,10 +1,24 @@
-import { balancePattern } from './balancePatter';
+import { Queue } from './queue';
 function demo() {
-  const data = '{(a+b)*[ab - }}}}}a-d]+ (a+b)}'
-  const balancePatter = new balancePattern(data)
-  let isBalanced = balancePatter.balancePatterCheck(data)
-  console.log("balance parten ---", isBalanced);
-  // console.log("Demo complete");
+  const queue = new Queue<any>();
+  queue.queueLinkedList();
+  // queue.isEmpty();
+  queue.peek();
+  queue.enQueue(10);
+  queue.peek();
+  queue.enQueue(20);
+  queue.peek();
+  queue.enQueue(30);
+  queue.peek();
+  queue.enQueue(40);
+  queue.peek();
+  queue.deQueue();
+  queue.deQueue();
+  queue.deQueue();
+   queue.peek();
+  queue.deleteQueue();
+  queue.peek();
+
 }
 
 demo();
