@@ -30,11 +30,43 @@ export class Stack<T> {
         this.linkedList.travesLinkedList()
         return this;
     }
+    printNextedStack(): Stack<T> {
+        const list = this.linkedList;
+        if (!list || list.size === 0) {
+            console.log('LinkedList is empty');
+            return this;
+        }
+
+        let currentNode = list.head;
+        for (let i = 0; i < list.size && currentNode; i++) {
+            const tempCurent = (currentNode.value as any)?.linkedList?.head as Node<T> | null | undefined;
+            if (!tempCurent) {
+                console.log('Inner LinkedList is empty');
+            } else {
+                let inner: Node<T> | null = tempCurent ?? null;
+                while (inner) {
+                    console.log(inner.value)
+                    process.stdout.write(`${inner.value} -> `);
+                    inner = inner.next;
+                }
+
+            }
+  
+            currentNode = currentNode.next;
+            // debug info:
+            // console.log("current ====", currentNode?.next)
+            // console.log("current ====", i)
+        }
+
+        return this;
+    }
 
 
     // peek the top value of the stack
     peek() {
+
         console.log('top stack ', this.top ? this.top?.value : null)
+        return this.top ? this.top?.value : null
     }
 
     //**
@@ -57,5 +89,11 @@ export class Stack<T> {
     // check if stack is empty
     isEmpty() {
         return this.height === 0
+    }
+
+    delete() {
+        this.top = null
+        this.height = 0
+        this.linkedList = new LinkedList();
     }
 }

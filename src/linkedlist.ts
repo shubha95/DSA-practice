@@ -37,6 +37,7 @@ export class LinkedList<T> {
        tempNode.next = this.head
        this.head = tempNode
     }
+    this.size++
     return this;
   }
 
@@ -84,6 +85,9 @@ export class LinkedList<T> {
 
   // delete the linked list
   deleteLinkedList(): LinkedList<T> {
+    this.head = null
+    this.tail = null
+    this.size = 0
     return this
   }
 }
