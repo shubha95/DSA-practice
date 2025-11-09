@@ -34,20 +34,36 @@ export class LinkedList<T> {
     if (this.head === null) {
       this.head = this.tail = tempNode;
     } else {
-       tempNode.next = this.head
-       this.head = tempNode
+      tempNode.next = this.head
+      this.head = tempNode
     }
     this.size++
     return this;
   }
 
+  insertAtTail(value: number): LinkedList<T> {
+    const tempNode = new Node<T>(value)
+    if (this.tail === null) {
+      this.head = this.tail = tempNode
+    } else {
+      this.tail.next = tempNode
+      this.tail = tempNode
+    }
+    this.size++
+
+    console.log("Inserted at tail ", value);
+    return this
+  }
+
+
+
 
   // remove value at head of linked list
-  removeAtHead(){
+  removeAtHead() {
     let tempHead = this.head?.value
-    if(this.head === null){
+    if (this.head === null) {
       console.log('List is Empaty')
-    }else{
+    } else {
       this.head = this.head.next;
       this.size--
     }
@@ -72,11 +88,12 @@ export class LinkedList<T> {
 
   // insert new value at specific location in linked list
   insertlocation(value: number, index: number): LinkedList<T> {
+    console.log("Inserting at location ", index, value);
     let tempNode = new Node<T>(value)
     let current = this.head;
     for (let i = 0; i < this.size; i++) {
       if (i === index) {
-
+        console.log("Inserting at location ", index);
       }
     }
     return this

@@ -1,7 +1,9 @@
 import linkedlist from "./linkedlist";
 import stack from "./stack";
+import queue from "./queue"
 function demo() {
-  stack
+  queue
+  // stack
   // linkedlist
 }
 
