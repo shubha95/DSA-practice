@@ -13,7 +13,6 @@
  *   find stack postion and remove top
  */
 
-
 import { Stack } from "./Stack";
 
 export class StackOfPlats<T> {

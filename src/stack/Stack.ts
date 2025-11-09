@@ -1,5 +1,5 @@
-import { Node } from './node';
-import { LinkedList } from './linkedlist';
+import { Node } from '../linkedlist/node';
+import { LinkedList } from '../linkedlist/linkedlist';
 export class Stack<T> {
     public top: Node<T> | null = null;
     public height: number = 0;
