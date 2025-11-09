@@ -1,5 +1,5 @@
-import { LinkedList } from './linkedlist';
-import { RemoveDublicate } from './removeDublicate';
+import { LinkedList } from './node/linkedlist';
+import { RemoveDublicate } from './node/removeDublicate';
 
 function demo() {
   const list = new LinkedList<number>();
