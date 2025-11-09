@@ -3,8 +3,8 @@ import stack from "./stack";
 import queue from "./queue"
 function demo() {
   queue
-  // stack
-  // linkedlist
+  stack
+  linkedlist
 }
 
 demo();

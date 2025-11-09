@@ -107,4 +107,18 @@ export class LinkedList<T> {
     this.size = 0
     return this
   }
+    insertLinkedList(value:number): LinkedList<T> {
+    const tempNode = new Node<T>(value);
+    if (this.head === null) {
+      this.head = this.tail = tempNode;
+    } else {
+      if (this.tail) {
+        this.tail.next = tempNode;
+        this.tail = tempNode;
+      }
+    }
+    this.size++
+    return this;
+  }
+
 }
