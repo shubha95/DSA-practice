@@ -1,6 +1,8 @@
 import linkedlist from "./linkedlist";
+import stack from "./stack";
 function demo() {
-  linkedlist
+  stack
+  // linkedlist
 }
 
 demo();
