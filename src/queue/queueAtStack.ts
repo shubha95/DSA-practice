@@ -1,4 +1,4 @@
-import { Stack } from "./Stack";
+import { Stack } from "../stack/Stack";
 
 export class QueueAtStack<T> {
     private queue: Stack<T> = new Stack()

@@ -1,5 +1,5 @@
-import { Node } from "./node";
-import { LinkedList } from "./linkedlist";
+import { Node } from "../linkedlist/node";
+import { LinkedList } from "../linkedlist/linkedlist";
 export class Queue<T> {
     private queueList: LinkedList<T> = new LinkedList<T>();
     constructor() {

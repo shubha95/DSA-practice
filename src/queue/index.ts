@@ -1,6 +1,6 @@
 import { Queue } from './queue';
 import { QueueAtStack } from './queueAtStack';
-function demo() {
+function queue() {
   const queue = new Queue<any>();
   const queueAtStack = new QueueAtStack<any>()
   // queue.queueLinkedList();
@@ -33,4 +33,4 @@ function demo() {
 
 }
 
-demo();
+export default queue();
