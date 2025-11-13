@@ -1,6 +1,6 @@
-import linkedlist from "./linkedlist";
-import stack from "./stack";
-import queue from "./queue"
+import linkedlist from "./linear/linkedlist";
+import stack from "./linear/stack";
+import queue from "./linear/queue"
 import recursion from "./recursion";
 function demo() {
   // queue
