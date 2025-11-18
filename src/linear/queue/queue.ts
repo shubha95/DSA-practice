@@ -15,7 +15,7 @@ export class Queue<T> {
  // isEmpty method
     isEmpty() {
         if (this.queueList.head === null) {
-            console.log("Queue is empty");
+            // console.log("Queue is empty");
             return true
         }
         return false
@@ -23,7 +23,7 @@ export class Queue<T> {
 
 
     // enQueue method
-    enQueue(value: number) {
+    enQueue(value: T) {
         let isEmpty = this.isEmpty();
         if (isEmpty) {
             this.queueList.insert(value);
@@ -39,7 +39,7 @@ export class Queue<T> {
             return "Queue is empty";
         } else {
             let removedValue = this.queueList.removeAtHead();
-            console.log("Dequeued value: ", removedValue);
+            // console.log("Dequeued value: ", removedValue);
             return removedValue;
         }
     }
@@ -50,7 +50,7 @@ export class Queue<T> {
         if (this.isEmpty()) {
             return "Queue is empty";
         } else {
-            console.log("peek value: ", this.queueList.head?.value);
+            // console.log("peek value: ", this.queueList.head?.value);
             return this.queueList.head?.value;
         }
     }

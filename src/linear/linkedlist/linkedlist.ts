@@ -13,7 +13,7 @@ export class LinkedList<T> {
   }
 
   // insert new value at the end of linked list
-  insert(value: number): LinkedList<T> {
+  insert(value: any): LinkedList<T> {
     const tempNode = new Node<T>(value);
     if (this.head === null) {
       this.head = this.tail = tempNode;
@@ -41,7 +41,7 @@ export class LinkedList<T> {
     return this;
   }
 
-  insertAtTail(value: number): LinkedList<T> {
+  insertAtTail(value: any): LinkedList<T> {
     const tempNode = new Node<T>(value)
     if (this.tail === null) {
       this.head = this.tail = tempNode
@@ -51,7 +51,7 @@ export class LinkedList<T> {
     }
     this.size++
 
-    console.log("Inserted at tail ", value);
+    // console.log("Inserted at tail ", value);
     return this
   }
 
