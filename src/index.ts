@@ -9,8 +9,8 @@ function demo() {
   // stack
   // linkedlist
   // recursion
-  // tree
-    treeArray
+  tree
+    // treeArray
 }
 
 demo();

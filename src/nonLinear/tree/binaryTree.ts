@@ -9,7 +9,9 @@ export class BinaryTree<T> {
         this.root = new Node(value)
     }
 
-    traverse() {
+    rootNode(){
+        return this.root;
+    }    traverse() {
         this.preOrderTraverse(this.root)
     }
 
