@@ -65,7 +65,7 @@ export class Stack<T> {
     // peek the top value of the stack
     peek() {
 
-        console.log('top stack ', this.top ? this.top?.value : null)
+        // console.log('top stack ', this.top ? this.top?.value : null)
         return this.top ? this.top?.value : null
     }
 
