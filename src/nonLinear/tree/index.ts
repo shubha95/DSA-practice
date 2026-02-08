@@ -2,6 +2,7 @@ import { BinaryTree } from "./binaryTree"
 import { inOrderIterative } from "./practice/inOrderIterative"
 import { preOrderItrative } from "./practice/preOrderItrative"
 import { postOrderIterarive } from "./practice/postOrderIterarive"
+import { AVLTree } from "./avlTree"
 
 function tree() {
 
@@ -19,8 +20,17 @@ function tree() {
     //  inOrder.inOrderIterativeofStack()
     //  const preOrder = new preOrderItrative()
     //  preOrder.preOrderIterativeofStack()
-    const postOrder = new postOrderIterarive()
-    postOrder.postOrderIterativeofStack()
+    // const postOrder = new postOrderIterarive()
+    // postOrder.postOrderIterativeofStack()
+
+    const avlTree = new AVLTree()
+    avlTree.insert(50)
+    avlTree.insert(30)
+    avlTree.insert(70) 
+    avlTree.insert(20)
+    avlTree.insert(10)
+    // avlTree.inOrderTraversal()
+    avlTree.delete(20)
 }
 
 
